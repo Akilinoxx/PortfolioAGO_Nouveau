@@ -1,0 +1,42 @@
+/* Styles pour la section vidéo de présentation */
+.presentation-video {
+    padding: 80px 0;
+    background-color: var(--bg-color);
+}
+
+.presentation-video h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--main-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.video-container iframe {
+    display: block;
+    border-radius: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .presentation-video {
+        padding: 50px 0;
+    }
+    
+    .video-container {
+        max-width: 95%;
+    }
+    
+    .video-container iframe {
+        height: 300px;
+    }
+}

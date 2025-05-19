@@ -1,0 +1,269 @@
+/* Styles pour la section d'accueil inspirée du modèle - version centralisée */
+.home {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 5%;
+    overflow: hidden;
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.home-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.home .content {
+    max-width: 500px;
+    z-index: 10;
+    text-align: center;
+    position: relative;
+}
+
+.home .content h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.home .content h2 span.accent-text {
+    color: var(--accent-color);
+}
+
+.home .content p {
+    font-size: 1.5rem;
+    color: #eee;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.home .content p span.typing-text {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.home .content .btn {
+    display: block;
+    width: max-content;
+    margin: 0 auto 20px;
+    padding: 12px 28px;
+    background: var(--accent-color);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+}
+
+.home .content .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.home .content .btn span {
+    margin-right: 10px;
+}
+
+.home .socials {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home .social-icons {
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    margin-top: 10px;
+    list-style: none;
+    justify-content: center;
+}
+
+.home .social-icons li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.home .social-icons li a:hover {
+    background: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.home .image {
+    position: relative;
+    z-index: 5;
+    width: 400px;
+    height: 400px;
+    min-width: 400px; /* Empêche l'image de rétrécir */
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: 0.2s linear, opacity 1s cubic-bezier(0.5, 0, 0, 1), transform 1s cubic-bezier(0.5, 0, 0, 1);
+    cursor: pointer;
+}
+
+.home .image:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+.home .image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    /* L'animation float est supprimée car elle sera remplacée par l'effet tilt au survol */
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Animation de la flèche */
+.fa-arrow-circle-down {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Animation du curseur de typing */
+.typed-cursor {
+    opacity: 1;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .home {
+        padding-top: 70px;
+        padding-bottom: 50px;
+    }
+    
+    .home .content h2 {
+        font-size: 2.8rem;
+    }
+    
+    .home .content p {
+        font-size: 1.3rem;
+    }
+    
+    .home .image {
+        width: 250px;
+        height: 250px;
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-flex {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .home .content {
+        text-align: center;
+    }
+    
+    .home .content h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    .home .content p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    .home .socials {
+        justify-content: center;
+    }
+    
+    .home .image {
+        width: 220px;
+        height: 220px;
+        min-width: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home .content h2 {
+        font-size: 2rem;
+    }
+    
+    .home .content p {
+        font-size: 1rem;
+    }
+    
+    .home .image {
+        width: 180px;
+        height: 180px;
+        min-width: 180px;
+    }
+    
+    .home .social-icons li a {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+/* Styles spécifiques pour les icônes sociales */
+.linkedin:hover { background: #0077B5 !important; }
+.github:hover { background: #333 !important; }
+.twitter:hover { background: #1DA1F2 !important; }
+.instagram:hover { background: #E4405F !important; }
+.telegram:hover { background: #0088cc !important; }
+.dev:hover { background: #000 !important; }

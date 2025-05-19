@@ -1,0 +1,71 @@
+/* Styles pour l'animation de retournement de la photo de profil */
+
+.profile-card-container {
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+    cursor: pointer;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+.profile-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card-container.flipped .profile-card {
+    transform: rotateY(180deg);
+}
+
+.profile-card-front, .profile-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card-front {
+    background-color: var(--bg-color);
+    z-index: 2;
+}
+
+.profile-card-back {
+    background-color: var(--bg-color);
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.profile-card-front img, .profile-card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Animation de pulsation lors du survol */
+.profile-card-container:hover .profile-card {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+}

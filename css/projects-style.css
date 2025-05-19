@@ -1,0 +1,267 @@
+/* Styles pour la section projets - Design moderne inspiré du modèle fourni */
+
+/* Section projets */
+.projects {
+    padding: 80px 0;
+    background-color: transparent; /* Fond transparent pour voir le réseau de neurones */
+    position: relative;
+    z-index: 1; /* Assure que la section est au-dessus du réseau de neurones mais permet de le voir */
+}
+
+.projects h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--text-white); /* Texte blanc pour contraster avec le fond sombre */
+    position: relative;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Ombre pour améliorer la lisibilité */
+}
+
+.projects h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    border-radius: 3px;
+}
+
+/* Espacement pour remplacer les onglets supprimés */
+.projects h2 {
+    margin-bottom: 40px;
+}
+
+/* Grille de projets */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Carte de projet */
+.project-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
+    cursor: pointer; /* Ajouter un curseur pointer pour indiquer que le projet est cliquable */
+    transform: translateY(0);
+}
+
+.project-inner {
+    position: relative;
+    background: linear-gradient(to bottom right, rgba(63, 81, 181, 0.1), rgba(76, 175, 80, 0.1));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px); /* Effet de flou pour améliorer la lisibilité tout en voyant le réseau */
+}
+
+.project-card:hover .project-inner {
+    box-shadow: 0 10px 25px rgba(76, 175, 80, 0.2);
+    transform: translateY(-5px);
+    border-color: rgba(76, 175, 80, 0.3);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.8); /* Fond légèrement transparent */
+    backdrop-filter: blur(3px); /* Effet de flou pour améliorer la lisibilité */
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    color: var(--text-color); /* Couleur plus foncée pour une meilleure lisibilité */
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.project-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.project-link, .project-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 10; /* Assure que les liens sont au-dessus de la carte et peuvent recevoir des clics */
+}
+
+.project-link {
+    color: var(--primary-color);
+}
+
+.project-link:hover {
+    color: var(--accent-color);
+}
+
+.project-details {
+    background-color: rgba(63, 81, 181, 0.1);
+    color: var(--primary-color);
+}
+
+.project-details:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Bouton Voir plus */
+.see-more {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.see-more-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(63, 81, 181, 0.2);
+    border-radius: 30px;
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.see-more-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.see-more-btn:hover {
+    background-color: rgba(63, 81, 181, 0.1);
+}
+
+.see-more-btn:hover::after {
+    width: 100%;
+}
+
+.see-more-btn:hover i {
+    transform: translateY(2px);
+}
+
+/* Animation pour les cartes de projet */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.project-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.project-card:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Media queries pour le responsive */
+@media (max-width: 992px) {
+    .projects-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        padding: 10px 15px;
+    }
+    
+    .project-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .project-link, .project-details {
+        width: 100%;
+        justify-content: center;
+    }
+}

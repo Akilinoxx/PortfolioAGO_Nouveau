@@ -1,0 +1,201 @@
+/* Styles pour la section des compétences */
+.skills {
+    position: relative;
+    min-height: 100vh;
+    padding: 80px 10%;
+    background: linear-gradient(to bottom, var(--bg-color), #081b29);
+}
+
+.skills .heading {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.skills .heading span {
+    color: var(--accent-color);
+}
+
+.skills .heading i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.skills .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.skills .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.skills .bar {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.skills .bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.skills .bar:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background: rgba(var(--accent-color-rgb), 0.1);
+}
+
+.skills .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.skills .info img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.skills .bar:hover .info img {
+    transform: scale(1.1);
+}
+
+.skills .info span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 5px;
+}
+
+/* Animation d'entrée pour les barres de compétences */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skills .bar {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+/* Délai d'animation pour chaque barre */
+/* Compétences prioritaires avec délais courts */
+.skills .bar:nth-child(1) { animation-delay: 0.1s; }  /* Make */
+.skills .bar:nth-child(2) { animation-delay: 0.15s; } /* Automatisation */
+.skills .bar:nth-child(3) { animation-delay: 0.2s; }  /* R.A.G */
+.skills .bar:nth-child(4) { animation-delay: 0.25s; } /* PowerBI */
+.skills .bar:nth-child(5) { animation-delay: 0.3s; }  /* Python */
+.skills .bar:nth-child(6) { animation-delay: 0.35s; } /* API */
+.skills .bar:nth-child(7) { animation-delay: 0.4s; }  /* AI LLM */
+.skills .bar:nth-child(8) { animation-delay: 0.45s; } /* Pandas */
+.skills .bar:nth-child(9) { animation-delay: 0.5s; }  /* Excel */
+.skills .bar:nth-child(10) { animation-delay: 0.55s; } /* HubSpot */
+.skills .bar:nth-child(11) { animation-delay: 0.6s; } /* Notion */
+
+/* Autres compétences avec délais plus longs */
+.skills .bar:nth-child(12) { animation-delay: 0.65s; }
+.skills .bar:nth-child(13) { animation-delay: 0.7s; }
+.skills .bar:nth-child(14) { animation-delay: 0.75s; }
+.skills .bar:nth-child(15) { animation-delay: 0.8s; }
+.skills .bar:nth-child(16) { animation-delay: 0.85s; }
+.skills .bar:nth-child(17) { animation-delay: 0.9s; }
+.skills .bar:nth-child(18) { animation-delay: 0.95s; }
+.skills .bar:nth-child(19) { animation-delay: 1s; }
+.skills .bar:nth-child(20) { animation-delay: 1.05s; }
+.skills .bar:nth-child(21) { animation-delay: 1.1s; }
+.skills .bar:nth-child(22) { animation-delay: 1.15s; }
+.skills .bar:nth-child(23) { animation-delay: 1.2s; }
+
+/* Compétences spécifiques avec délais personnalisés */
+.skills .skill-matplotlib { animation-delay: 1.2s !important; }
+.skills .skill-datahaiku { animation-delay: 1.23s !important; }
+
+/* Groupe de compétences de scraping - délais progressifs */
+.skills .skill-scraping { animation-delay: 1.25s !important; }
+
+/* Utilisation de classes spécifiques pour toutes les compétences de scraping */
+.skills .skill-scrapy { animation-delay: 1.3s !important; }
+.skills .skill-beautifulsoup { animation-delay: 1.35s !important; }
+.skills .skill-selenium { animation-delay: 1.4s !important; }
+.skills .skill-requests { animation-delay: 1.45s !important; }
+
+/* Marketing toujours en dernier */
+.skills .skill-marketing { animation-delay: 1.5s !important; }
+
+/* Responsive design */
+@media (max-width: 991px) {
+    .skills .row {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 20px;
+    }
+    
+    .skills .bar {
+        padding: 15px;
+    }
+    
+    .skills .info img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .skills .info span {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .skills .row {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 15px;
+    }
+    
+    .skills .heading {
+        font-size: 2.5rem;
+    }
+    
+    .skills .bar {
+        padding: 10px;
+    }
+    
+    .skills .info img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .skills .info span {
+        font-size: 0.7rem;
+    }
+}

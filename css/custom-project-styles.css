@@ -1,0 +1,18 @@
+/* Styles personnalisés pour les projets spécifiques */
+
+/* Style pour l'image du projet de scraping - transparence réduite */
+.project-card:first-child .project-image img {
+    opacity: 0.3; /* Opacité réduite à 0,3 comme demandé */
+    transition: all 0.5s ease;
+}
+
+.project-card:first-child:hover .project-image img {
+    opacity: 0.4; /* Légèrement plus visible au survol */
+    transform: scale(1.05); /* Effet de zoom standard */
+}
+
+/* Amélioration du contraste pour le texte sur l'image du projet de scraping */
+.project-card:first-child .project-content {
+    background: rgba(255, 255, 255, 0.9); /* Fond plus opaque pour améliorer la lisibilité */
+    /* Suppression de la bordure bleue */
+}
