@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Data Science & Automatisation</title>
+    <!-- Fichiers CSS -->    
+    <link rel="stylesheet" href="css/style.css?v=20250511">
+    <link rel="stylesheet" href="css/neural-style.css">
+    <link rel="stylesheet" href="css/home-style.css">
+    <link rel="stylesheet" href="css/skills-style.css">
+    <link rel="stylesheet" href="css/projects-style.css">
+    <link rel="stylesheet" href="css/custom-project-styles.css">
+    <link rel="stylesheet" href="css/skills-tabs.css">
+    <link rel="stylesheet" href="css/certifications-style.css">
+    <link rel="stylesheet" href="css/profile-card-flip.css">
+    <link rel="stylesheet" href="css/presentation-video.css">
+    <link rel="stylesheet" href="css/language-switcher.css">
+    
+    <!-- Fichiers JavaScript -->
+    
+    <script src="js/script.js" defer></script>
+    <script src="js/particles.js" defer></script>
+    <script src="js/typing-effect.js" defer></script>
+    <script src="js/tilt-effect.js" defer></script>
+    <script src="js/mobile-menu.js" defer></script>
+    <script src="js/projects.js" defer></script>
+    <script src="js/skills-tabs.js" defer></script>
+    <script src="js/certifications.js" defer></script>
+    <script src="js/certifications-fix.js" defer></script>
+    <script src="js/profile-card-flip.js" defer></script>
+    <!-- Script content-loader.js supprimé -->
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Nouvelle structure d'en-tête simplifiée pour garantir le défilement normal -->
+    <div class="main-header">
+        <div class="container header-container">
+            <div class="header-left">
+                <a href="https://akilinoxx.github.io/Neural_Network/" class="neural-network-btn"><i class="fas fa-brain"></i> <span data-i18n="explore_neural">Explorer le réseau neuronal</span></a>
+            </div>
+            <!-- Bouton hamburger pour mobile -->
+            <div class="menu-toggle" id="mobileMenuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="header-right" id="mobileMenu">
+                <ul class="nav-links">
+                    <li><a href="#home" data-i18n="nav_home">Accueil</a></li>
+                    <li><a href="#projets" data-i18n="nav_projects">Projets</a></li>
+                    <li><a href="#competences" data-i18n="nav_skills">Compétences</a></li>
+                    <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+                    <li><a href="#a-propos" data-i18n="nav_about">À propos</a></li>
+                </ul>
+                <!-- Sélecteur de langue -->
+                <div class="language-selector">
+                    <button id="lang-fr" class="lang-btn active" title="Français">
+                        <img src="images/flag-fr.png" alt="Drapeau français" width="24" height="16">
+                    </button>
+                    <button id="lang-en" class="lang-btn" title="English">
+                        <img src="images/flag-en.png" alt="Drapeau anglais" width="24" height="16">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="home" id="home">
+        <!-- Les particules existantes sont déjà ajoutées via particles.js -->
+        <div class="home-container">
+            <div class="home-flex">
+                <div class="profile-card-container" data-sr-id="3">
+                    <div class="profile-card">
+                        <div class="profile-card-front">
+                            <img draggable="false" class="tilt" src="images/PDP.jpeg" alt="Votre photo">
+                        </div>
+                        <div class="profile-card-back">
+                            <img draggable="false" src="gif_easter_egg/WhatsApp-Video-2025-05-09-at-22.24.13.gif" alt="Easter Egg GIF">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content">
+                    <h2><span data-i18n="hello">Bonjour,</span><br> <span data-i18n="welcome">Bienvenue sur</span> <span class="accent-text" data-i18n="my_portfolio">Mon Portfolio</span></h2>
+                    <p><span data-i18n="specialized_in">Je suis spécialisé en</span> <span class="typing-text">Data Analysis</span><span class="typed-cursor">|</span></p>
+                    
+                    <div class="socials">
+                        <a href="#a-propos" class="btn">
+                            <span data-i18n="learn_more">En savoir plus</span>
+                            <i class="fas fa-arrow-circle-down"></i>
+                        </a>
+                        
+                        <ul class="social-icons">
+                            <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/goupil27/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+                            <li><a class="github" aria-label="GitHub" href="https://github.com/Akilinoxx" target="_blank"><i class="fab fa-github"></i></a></li>
+                            <li><a class="notion" aria-label="Notion" href="https://sable-driver-0d1.notion.site/Bienvenue-sur-notre-Portfolio-1d954783cae080db85b5d5613547f67a" target="_blank"><i class="fas fa-sticky-note"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="projects">
+        <div class="container">
+            <h2 data-i18n="my_projects">Mes Projets</h2>
+            
+
+            
+            <!-- Grille de projets -->
+            <div class="projects-container">
+                <!-- Projet 1 -->
+                <div class="project-card">
+                    <div class="project-inner">
+                        <div class="project-image">
+                            <img src="images/SCRAPPING WITH Python, AI, & No Code (1350 x 1080 px) (8).png" alt="Scraping avec Python et IA">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-i18n="project1_title">Hackaton des 3M Seconde Place</h3>
+                            <p class="project-description" data-i18n="project1_desc"><strong>Eugenia School</strong> a organisé un <strong>hackathon</strong> en réunissant trois acteurs majeurs : <strong>Malt</strong>, <strong>Mistral AI</strong> et <strong>Make</strong>, avec un objectif commun : challenger les étudiants sur un <strong>business case réel</strong> de haut niveau. La problématique que rencontre malt ? <strong>L'hyperpersonnalisation</strong> de leurs <strong>campagnes marketing</strong>.</p>
+                            <div class="project-actions">
+                                <a href="https://github.com/Akilinoxx/Hackaton-Make-Malt" class="project-link" target="_blank">
+                                    <span data-i18n="github">GitHub</span>
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://sable-driver-0d1.notion.site/Hackaton-Des-3M-Deuxi-me-Place-1d454783cae080f78d6bccadfd05758d" class="project-details" target="_blank">
+                                    <span data-i18n="details">Détails</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 2 -->
+                <div class="project-card">
+                    <div class="project-inner">
+                        <div class="project-image">
+                            <img src="images/Hackaton_Binko_Modèle-diffusion-AI.png" alt="Hackathon Binko - Modèle de diffusion IA">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-i18n="project2_title">Hackathon Binko - Modèle de diffusion IA</h3>
+                            <p class="project-description" data-i18n="project2_desc">Lors du <strong>Géniathon</strong> organisé par <strong>Eugenia School</strong> pour la startup <strong>BINKO</strong>, nous avions un défi passionnant à relever : <strong>aider à la création d'une IA qui permet de faire un tri automatique des déchets.</strong> Avec mon équipe nous avons décroché la <strong>2ᵉ place</strong> du concours 🥈</p>
+                            <div class="project-actions">
+                                <a href="#" class="project-link" onclick="window.open('#', '_blank'); event.stopPropagation();">
+                                    <span data-i18n="github">GitHub</span>
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://sable-driver-0d1.notion.site/G-niathon-Binko-2-me-place-1d854783cae080b6aea4cb5fb9e4b233" class="project-details" target="_blank">
+                                    <span data-i18n="details">Détails</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 3 -->
+                <div class="project-card">
+                    <div class="project-inner">
+                        <div class="project-image">
+                            <img src="images/ChatGPT Image May 9, 2025, 09_28_47 PM.png" alt="Automatisation des Webinars BAW">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-i18n="project3_title">Automatisation des Webinars pour BAW</h3>
+                            <p class="project-description" data-i18n="project3_desc">J'ai développé une <strong>application desktop</strong> en <strong>Python</strong> pour <strong>BAW Marketing</strong>, afin <strong>d'automatiser</strong> la conversion des replays de <strong>webinars</strong> en fichiers audio, puis en <strong>retranscriptions</strong>, facilitant ainsi la création de <strong>contenus dérivés</strong> (articles, résumés, publications) grâce à <strong>l'IA</strong>. Utilisation <strong>Python + MAKE</strong></p>
+                            <div class="project-actions">
+                                <a href="https://github.com/Akilinoxx/Automatisation_Webinars_BAW" class="project-link" target="_blank">
+                                    <span data-i18n="github">GitHub</span>
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://sable-driver-0d1.notion.site/Automatisation-Complexe-des-replay-Webinars-1df54783cae0807cb121cb1875e19062" class="project-details" target="_blank">
+                                    <span data-i18n="details">Détails</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 4 -->
+                <div class="project-card">
+                    <div class="project-inner">
+                        <div class="project-image">
+                            <img src="images/minia_scrap_pappers.png" alt="Scrapping de données d'entreprises sur Pappers">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-i18n="project4_title">Scrapping de données d'entreprises Pappers</h3>
+                            <p class="project-description" data-i18n="project4_desc">Développement d'un <strong>scraper</strong> pour extraire des <strong>données d'entreprises</strong> depuis Pappers avec <strong>contournement des restrictions</strong> grâce à une <strong>boucle de proxys résidentiels</strong>, permettant une collecte efficace et à grande échelle.</p>
+                            <div class="project-actions">
+                                <a href="https://github.com/Akilinoxx/Scrapping-Pappers" class="project-link" target="_blank">
+                                    <span data-i18n="github">GitHub</span>
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-details" target="_blank">
+                                    <span data-i18n="details">Détails</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 5 -->
+                <div class="project-card">
+                    <div class="project-inner">
+                        <div class="project-image">
+                            <img src="images/RAG.png" alt="Scraping E-commerce avec BeautifulSoup">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-i18n="project5_title">Scraping & RAG pour extraction d'informations web</h3>
+                            <p class="project-description" data-i18n="project5_desc">Développement d'une solution mêlant <strong>web scraping</strong> et <strong>RAG</strong> pour extraire automatiquement des <strong>données clés</strong> (menus, adresses, contacts) depuis des sites de <strong>restaurants</strong> ou de <strong>cabinets dentaires</strong>, en les structurant de manière claire et exploitable.</p>
+                            <div class="project-actions">
+                                <a href="#" class="project-link" onclick="window.open('#', '_blank'); event.stopPropagation();">
+                                    <span>GitHub</span>
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-details" onclick="window.open('#', '_blank'); event.stopPropagation();">
+                                    <span>Détails</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 6 -->
+                <div class="project-card">
+                    <div class="project-inner">
+                        <div class="project-image">
+                            <img src="images/hackaton_wtj.png" alt="Dashboard PowerBI pour l'analyse de données">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title" data-i18n="project6_title">Hackaton WTJ - COMING SOON</h3>
+                            <p class="project-description" data-i18n="project6_desc">Participation prochaine au <strong>hackathon</strong> organisé par <strong>Welcome to the Jungle</strong>. Détails du projet et résultats à venir. Restez à l'écoute pour découvrir les innovations et solutions que nous développerons lors de cet événement !</p>
+                            <div class="project-actions">
+                                <a href="#" class="project-link" onclick="window.open('#', '_blank'); event.stopPropagation();">
+                                    <span>GitHub</span>
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-details" onclick="window.open('#', '_blank'); event.stopPropagation();">
+                                    <span>Détails</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bouton Voir plus -->
+            <div class="see-more">
+                <button class="see-more-btn">
+                    <span data-i18n="see_more">Voir plus</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="competences">
+        <!-- Onglets Tech Stack et Certifications -->
+        <div class="container">
+            <div class="skills-tabs">
+                <button class="skills-tab active" data-tab="tech-stack">
+                    <i class="fas fa-layer-group"></i>
+                    <span data-i18n="tech_stack">Tech Stack</span>
+                </button>
+                <button class="skills-tab" data-tab="certifications">
+                    <i class="fas fa-certificate"></i>
+                    <span data-i18n="certifications">Certifications</span>
+                </button>
+            </div>
+
+            <!-- Contenu Tech Stack -->
+            <div class="skills-content active" id="tech-stack">
+                <div class="row" id="skillsContainer">
+                <!-- Compétences prioritaires dans l'ordre spécifié -->
+                <div class="bar">
+                    <div class="info">
+                        <img src="images/make-com-logo.png" alt="skill">
+                        <span>Make</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="https://img.icons8.com/color/48/000000/workflow.png" alt="skill">
+                        <span>Automatisation</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="https://img.icons8.com/color/48/000000/search--v1.png" alt="skill">
+                        <span>R.A.G</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="skill">
+                        <span>PowerBI</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="https://img.icons8.com/color/48/000000/python--v1.png" alt="skill">
+                        <span>Python</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="https://img.icons8.com/color/48/000000/api.png" alt="skill">
+                        <span>API</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="https://img.icons8.com/color/48/000000/chatgpt.png" alt="skill">
+                        <span>AI LLM</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="https://img.icons8.com/color/48/000000/pandas.png" alt="skill">
+                        <span>Pandas</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="https://img.icons8.com/color/48/000000/ms-excel.png" alt="skill">
+                        <span>Excel</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="images/hubspot.png" alt="skill">
+                        <span>HubSpot</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="images/Notion-logo.png" alt="skill">
+                        <span>Notion</span>
+                    </div>
+                </div>
+                
+                <!-- Autres compétences -->
+                <div class="bar">
+                    <div class="info">
+                        <img src="images/RLOGO.png" alt="skill">
+                        <span>R</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="https://img.icons8.com/color/48/000000/tableau-software.png" alt="skill">
+                        <span>Tableau</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="https://img.icons8.com/color/48/000000/git.png" alt="skill">
+                        <span>Git</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="https://img.icons8.com/glyph-neue/48/ffffff/github.png" alt="skill">
+                        <span>GitHub</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="https://img.icons8.com/color/48/000000/sql.png" alt="skill">
+                        <span>SQL</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="skill">
+                        <span>noSQL</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="https://img.icons8.com/color/48/000000/artificial-intelligence.png" alt="skill">
+                        <span>Machine Learning</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="images/zapier.png" alt="skill">
+                        <span>Zapier</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="images/n8n-color.png" alt="skill">
+                        <span>N8N</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="images/POWERAUTOMATE.png" alt="skill">
+                        <span>PowerAutomate</span>
+                    </div>
+                </div>
+                <div class="bar">
+                    <div class="info">
+                        <img src="https://img.icons8.com/color/48/000000/docker.png" alt="skill">
+                        <span>Docker</span>
+                    </div>
+                </div>
+
+                <div class="bar">
+                    <div class="info">
+                        <img src="images/DATACLEANING.png" alt="skill">
+                        <span>DataCleaning</span>
+                    </div>
+                </div>
+                <div class="bar skill-matplotlib">
+                    <div class="info">
+                        <img src="images/MATPLOTLIB.png" alt="skill">
+                        <span>MatPlotLib</span>
+                    </div>
+                </div>
+                <div class="bar skill-datahaiku">
+                    <div class="info">
+                        <img src="images/datahaiku.webp" alt="skill">
+                        <span>Datahaiku</span>
+                    </div>
+                </div>
+                <!-- Groupe de compétences de scraping -->
+                <div class="bar skill-scraping">
+                    <div class="info">
+                        <img src="images/scrapping.png" alt="skill">
+                        <span>Scraping</span>
+                    </div>
+                </div>
+                <div class="bar skill-scrapy">
+                    <div class="info">
+                        <img src="images/scrapy.png" alt="skill">
+                        <span>Scrapy</span>
+                    </div>
+                </div>
+                <div class="bar skill-beautifulsoup">
+                    <div class="info">
+                        <img src="images/beautifulsoup.png" alt="skill">
+                        <span>BeautifulSoup</span>
+                    </div>
+                </div>
+                <div class="bar skill-selenium">
+                    <div class="info">
+                        <img src="images/selenium.png" alt="skill">
+                        <span>Selenium</span>
+                    </div>
+                </div>
+                <div class="bar skill-requests">
+                    <div class="info">
+                        <img src="images/request.png" alt="skill">
+                        <span>Requests</span>
+                    </div>
+                </div>
+                <div class="bar skill-marketing">
+                    <div class="info">
+                        <img src="https://img.icons8.com/color/48/000000/commercial.png" alt="skill">
+                        <span>Marketing</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-i18n="contact_me">Contact</h2>
+            <p data-i18n="contact_text">N'hésitez pas à me contacter pour discuter de projets ou d'opportunités de collaboration.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:antoine2.pro@outlook.fr">antoine2.pro@outlook.fr</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/goupil27/" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/Akilinoxx" target="_blank">GitHub</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-sticky-note"></i>
+                    <a href="https://sable-driver-0d1.notion.site/Bienvenue-sur-notre-Portfolio-1d954783cae080db85b5d5613547f67a" target="_blank">Notion</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="a-propos" class="about">
+        <div class="container">
+            <h2 data-i18n="about_me">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-i18n="about_text_1">Bonjour !
+Je suis Antoine, spécialisé en Data Intelligence, automatisation par l'IA et intégration d'outils métier.
+Mon travail consiste à transformer les données en leviers de performance, en alliant analyse, automatisation et stratégie digitale.</p>
+                    <p data-i18n="about_text_2">Je maîtrise l'ensemble de la chaîne de valeur de la donnée : de la collecte intelligente (via web scraping ou intégration API) à son exploitation avancée (visualisation, dashboards, analyse prédictive), en passant par l'automatisation de workflows avec des outils comme Make.com.
+En tant qu'expert HubSpot, j'optimise l'alignement entre marketing, sales et données CRM, pour booster la productivité et la connaissance client.</p>
+                    <p data-i18n="about_text_3">Ouvert aux opportunités professionnelles en phase avec mon profil, je cherche à collaborer sur des projets où la donnée devient un réel moteur d'innovation.</p>
+                </div>
+                <div class="about-image">
+                    <!-- Vidéo de présentation -->
+                    <div class="video-presentation">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/f6--Sw5Jthw" title="Vidéo de présentation du portfolio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p data-i18n="copyright">&copy; 2025 Antoine Goupil. Tous droits réservés.</p>
+        </div>
+    </footer>
+    
+    <!-- Fichiers de traduction -->
+    <script src="js/translations/fr.js"></script>
+    <script src="js/translations/en.js"></script>
+    <script src="js/language-switcher.js"></script>
+</body>
+</html>
