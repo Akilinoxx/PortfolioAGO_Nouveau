@@ -24,10 +24,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Créer la structure HTML du chatbot
     chatbotContainer.innerHTML = `
-        <div class="cv-chatbot" style="display: none; flex-direction: column; height: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-color: #fff;">
+        <div class="cv-chatbot" style="display: flex; flex-direction: column; height: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-color: #fff;">
             <div class="cv-chatbot-header" style="padding: 15px; background-color: #007bff; color: #fff; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
-                <div>Assistant CV</div>
+                <div>AGENT IA d'Antoine</div>
                 <button class="cv-chatbot-toggle-minimize" style="background: none; border: none; color: #fff; cursor: pointer; font-size: 16px;">−</button>
+            </div>
+            <div class="cv-chatbot-suggested-questions" style="padding: 10px; background-color: #f0f8ff; display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid #e0e0e0;">
+                <button class="cv-chatbot-question-pill" style="background-color: #e6f2ff; color: #0066cc; border: 1px solid #99ccff; border-radius: 16px; padding: 6px 12px; font-size: 12px; cursor: pointer; transition: all 0.2s;">Quelles sont vos compétences techniques ?</button>
+                <button class="cv-chatbot-question-pill" style="background-color: #e6f2ff; color: #0066cc; border: 1px solid #99ccff; border-radius: 16px; padding: 6px 12px; font-size: 12px; cursor: pointer; transition: all 0.2s;">Parlez-moi de votre expérience professionnelle</button>
+                <button class="cv-chatbot-question-pill" style="background-color: #e6f2ff; color: #0066cc; border: 1px solid #99ccff; border-radius: 16px; padding: 6px 12px; font-size: 12px; cursor: pointer; transition: all 0.2s;">Quelle est votre formation ?</button>
+                <button class="cv-chatbot-question-pill" style="background-color: #e6f2ff; color: #0066cc; border: 1px solid #99ccff; border-radius: 16px; padding: 6px 12px; font-size: 12px; cursor: pointer; transition: all 0.2s;">Quels sont vos projets récents ?</button>
             </div>
             <div class="cv-chatbot-messages" style="flex: 1; overflow-y: auto; padding: 15px; background-color: #f8f9fa;">
                 <div class="cv-chatbot-message agent" style="background-color: #e9ecef; color: #333; padding: 10px 15px; border-radius: 18px; margin-bottom: 10px; max-width: 80%; align-self: flex-start; border-bottom-left-radius: 4px;">
@@ -39,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button style="background-color: #007bff; color: white; border: none; border-radius: 20px; padding: 10px 15px; margin-left: 10px; cursor: pointer;">Envoyer</button>
             </div>
         </div>
-        <button class="cv-chatbot-toggle-open" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; border-radius: 50%; background-color: #007bff; color: white; border: none; box-shadow: 0 2px 10px rgba(0,0,0,0.2); cursor: pointer; font-size: 24px; display: flex; align-items: center; justify-content: center;">
+        <button class="cv-chatbot-toggle-open" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; border-radius: 50%; background-color: #007bff; color: white; border: none; box-shadow: 0 2px 10px rgba(0,0,0,0.2); cursor: pointer; font-size: 24px; display: none; align-items: center; justify-content: center;">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
             </svg>
@@ -233,6 +239,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
             
+            // Réactiver l'entrée utilisateur après avoir reçu la réponse complète
+            chatInput.disabled = false;
+            sendButton.disabled = false;
+            chatInput.focus();
+            
         } catch (error) {
             console.error('Erreur lors de la communication avec l\'API:', error);
             removeTypingIndicator();
@@ -263,6 +274,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 chatInput.value = '';
             }
         }
+    });
+    
+    // Gestionnaire d'événement pour les questions préremplies
+    const questionPills = chatbotContainer.querySelectorAll('.cv-chatbot-question-pill');
+    questionPills.forEach(pill => {
+        pill.addEventListener('click', function() {
+            const question = this.textContent.trim();
+            sendQuestion(question);
+            
+            // Effet visuel au clic
+            this.style.backgroundColor = '#cce5ff';
+            this.style.transform = 'scale(0.95)';
+            
+            // Réinitialiser l'apparence après un court délai
+            setTimeout(() => {
+                this.style.backgroundColor = '#e6f2ff';
+                this.style.transform = 'scale(1)';
+            }, 300);
+        });
+        
+        // Effet de survol
+        pill.addEventListener('mouseover', function() {
+            this.style.backgroundColor = '#d4e9ff';
+            this.style.transform = 'scale(1.03)';
+        });
+        
+        pill.addEventListener('mouseout', function() {
+            this.style.backgroundColor = '#e6f2ff';
+            this.style.transform = 'scale(1)';
+        });
     });
     
     // Gestionnaire d'événement pour le bouton d'ouverture
