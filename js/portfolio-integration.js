@@ -25,28 +25,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Créer la structure HTML du chatbot
     chatbotContainer.innerHTML = `
-        <div class="cv-chatbot" style="display: flex; flex-direction: column; height: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-color: #fff;">
-            <div class="cv-chatbot-header" style="padding: 15px; background-color: #007bff; color: #fff; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
+        <div class="cv-chatbot" style="display: flex; flex-direction: column; height: 100%; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.2); background-color: #fff;">
+            <div class="cv-chatbot-header" style="padding: 15px; background-color: #0d47a1; color: #fff; font-weight: bold; display: flex; justify-content: space-between; align-items: center;">
                 <div>AGENT IA d'Antoine</div>
                 <button class="cv-chatbot-toggle-minimize" style="background: none; border: none; color: #fff; cursor: pointer; font-size: 16px;">−</button>
             </div>
-            <div class="cv-chatbot-suggested-questions" style="padding: 10px; background-color: #f0f8ff; display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid #e0e0e0;">
-                <button class="cv-chatbot-question-pill" style="background-color: #e6f2ff; color: #0066cc; border: 1px solid #99ccff; border-radius: 16px; padding: 6px 12px; font-size: 12px; cursor: pointer; transition: all 0.2s;">Quelles sont vos compétences techniques ?</button>
-                <button class="cv-chatbot-question-pill" style="background-color: #e6f2ff; color: #0066cc; border: 1px solid #99ccff; border-radius: 16px; padding: 6px 12px; font-size: 12px; cursor: pointer; transition: all 0.2s;">Parlez-moi de votre expérience professionnelle</button>
-                <button class="cv-chatbot-question-pill" style="background-color: #e6f2ff; color: #0066cc; border: 1px solid #99ccff; border-radius: 16px; padding: 6px 12px; font-size: 12px; cursor: pointer; transition: all 0.2s;">Quelle est votre formation ?</button>
-                <button class="cv-chatbot-question-pill" style="background-color: #e6f2ff; color: #0066cc; border: 1px solid #99ccff; border-radius: 16px; padding: 6px 12px; font-size: 12px; cursor: pointer; transition: all 0.2s;">Quels sont vos projets récents ?</button>
+            <div class="cv-chatbot-suggested-questions" style="padding: 10px; background-color: #f5f9ff; display: flex; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid #e0e0e0;">
+                <button class="cv-chatbot-question-pill" style="background-color: #e3f2fd; color: #0d47a1; border: 1px solid #64b5f6; border-radius: 16px; padding: 6px 12px; font-size: 12px; cursor: pointer; transition: all 0.2s;">Quelles sont vos compétences techniques ?</button>
+                <button class="cv-chatbot-question-pill" style="background-color: #e3f2fd; color: #0d47a1; border: 1px solid #64b5f6; border-radius: 16px; padding: 6px 12px; font-size: 12px; cursor: pointer; transition: all 0.2s;">Parlez-moi de votre expérience professionnelle</button>
+                <button class="cv-chatbot-question-pill" style="background-color: #e3f2fd; color: #0d47a1; border: 1px solid #64b5f6; border-radius: 16px; padding: 6px 12px; font-size: 12px; cursor: pointer; transition: all 0.2s;">Quelle est votre formation ?</button>
+                <button class="cv-chatbot-question-pill" style="background-color: #e3f2fd; color: #0d47a1; border: 1px solid #64b5f6; border-radius: 16px; padding: 6px 12px; font-size: 12px; cursor: pointer; transition: all 0.2s;">Quels sont vos projets récents ?</button>
             </div>
-            <div class="cv-chatbot-messages" style="flex: 1; overflow-y: auto; padding: 15px; background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-                <div class="cv-chatbot-message agent" style="background-color: #e9ecef; color: #333; padding: 10px 15px; border-radius: 18px; margin-bottom: 10px; max-width: 80%; align-self: flex-start; border-bottom-left-radius: 4px; font-size: 14px; line-height: 1.4;">
+            <div class="cv-chatbot-messages" style="flex: 1; overflow-y: auto; padding: 15px; background-color: #ffffff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                <div class="cv-chatbot-message agent" style="background-color: #e3f2fd; color: #212121; padding: 10px 15px; border-radius: 18px; margin-bottom: 10px; max-width: 80%; align-self: flex-start; border-bottom-left-radius: 4px; font-size: 14px; line-height: 1.4;">
                     Bonjour ! Je suis l'assistant virtuel d'Antoine Goupil. N'hésitez pas à me poser des questions sur ses compétences, son expérience, sa formation ou ses projets.
                 </div>
             </div>
-            <div class="cv-chatbot-input" style="display: flex; padding: 10px; background-color: #fff; border-top: 1px solid #ddd;">
-                <input type="text" placeholder="Posez votre question ici..." style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 20px; outline: none;">
-                <button style="background-color: #007bff; color: white; border: none; border-radius: 20px; padding: 10px 15px; margin-left: 10px; cursor: pointer;">Envoyer</button>
+            <div class="cv-chatbot-input" style="display: flex; padding: 10px; background-color: #fff; border-top: 1px solid #e0e0e0;">
+                <input type="text" placeholder="Posez votre question ici..." style="flex: 1; padding: 10px; border: 1px solid #64b5f6; border-radius: 20px; outline: none;">
+                <button style="background: linear-gradient(45deg, #1e88e5, #0d47a1); color: white; border: none; border-radius: 20px; padding: 10px 15px; margin-left: 10px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 2px 10px rgba(13, 71, 161, 0.3);">Envoyer</button>
             </div>
         </div>
-        <button class="cv-chatbot-toggle-open" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; border-radius: 50%; background-color: #007bff; color: white; border: none; box-shadow: 0 2px 10px rgba(0,0,0,0.2); cursor: pointer; font-size: 24px; display: none; align-items: center; justify-content: center;">
+        <button class="cv-chatbot-toggle-open" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(45deg, #1e88e5, #0d47a1); color: white; border: none; box-shadow: 0 4px 15px rgba(13, 71, 161, 0.5); cursor: pointer; font-size: 24px; display: none; align-items: center; justify-content: center; transition: all 0.3s ease;">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
             </svg>
@@ -92,8 +92,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Appliquer les styles en fonction du type de message
         Object.assign(messageElement.style, {
-            backgroundColor: isUser ? '#007bff' : '#e9ecef',
-            color: isUser ? '#fff' : '#333',
+            backgroundColor: isUser ? '#0d47a1' : '#e3f2fd',
+            color: isUser ? '#fff' : '#212121',
             padding: '10px 15px',
             borderRadius: '18px',
             marginBottom: '10px',
@@ -220,8 +220,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Appliquer les styles
             Object.assign(agentMessageElement.style, {
-                backgroundColor: '#e9ecef',
-                color: '#333',
+                backgroundColor: '#e3f2fd',
+                color: '#212121',
                 padding: '10px 15px',
                 borderRadius: '18px',
                 marginBottom: '10px',
@@ -315,19 +315,19 @@ document.addEventListener('DOMContentLoaded', function() {
             sendQuestion(question);
             
             // Effet visuel au clic
-            this.style.backgroundColor = '#cce5ff';
+            this.style.backgroundColor = '#bbdefb';
             this.style.transform = 'scale(0.95)';
             
             // Réinitialiser l'apparence après un court délai
             setTimeout(() => {
-                this.style.backgroundColor = '#e6f2ff';
+                this.style.backgroundColor = '#e3f2fd';
                 this.style.transform = 'scale(1)';
             }, 300);
         });
         
         // Effet de survol
         pill.addEventListener('mouseover', function() {
-            this.style.backgroundColor = '#d4e9ff';
+            this.style.backgroundColor = '#bbdefb';
             this.style.transform = 'scale(1.03)';
         });
         
