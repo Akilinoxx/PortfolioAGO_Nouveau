@@ -18,7 +18,8 @@ document.addEventListener('DOMContentLoaded', function() {
             right: '20px',
             width: '350px',
             height: '500px',
-            zIndex: '1000'
+            zIndex: '1000',
+            pointerEvents: 'auto' // S'assurer que les interactions sont activées par défaut
         });
     }
     
@@ -340,6 +341,8 @@ document.addEventListener('DOMContentLoaded', function() {
     openButton.addEventListener('click', function() {
         chatWindow.style.display = 'flex';
         openButton.style.display = 'none';
+        // Réactiver les interactions avec le conteneur du chatbot
+        chatbotContainer.style.pointerEvents = 'auto';
         chatInput.focus();
     });
     
@@ -347,5 +350,9 @@ document.addEventListener('DOMContentLoaded', function() {
     minimizeButton.addEventListener('click', function() {
         chatWindow.style.display = 'none';
         openButton.style.display = 'flex';
+        // Désactiver le conteneur du chatbot pour permettre les interactions avec les éléments sous-jacents
+        chatbotContainer.style.pointerEvents = 'none';
+        // S'assurer que le bouton d'ouverture reste cliquable
+        openButton.style.pointerEvents = 'auto';
     });
 });
