@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <button class="cv-chatbot-question-pill" style="background-color: #e6f2ff; color: #0066cc; border: 1px solid #99ccff; border-radius: 16px; padding: 6px 12px; font-size: 12px; cursor: pointer; transition: all 0.2s;">Quelle est votre formation ?</button>
                 <button class="cv-chatbot-question-pill" style="background-color: #e6f2ff; color: #0066cc; border: 1px solid #99ccff; border-radius: 16px; padding: 6px 12px; font-size: 12px; cursor: pointer; transition: all 0.2s;">Quels sont vos projets récents ?</button>
             </div>
-            <div class="cv-chatbot-messages" style="flex: 1; overflow-y: auto; padding: 15px; background-color: #f8f9fa;">
-                <div class="cv-chatbot-message agent" style="background-color: #e9ecef; color: #333; padding: 10px 15px; border-radius: 18px; margin-bottom: 10px; max-width: 80%; align-self: flex-start; border-bottom-left-radius: 4px;">
+            <div class="cv-chatbot-messages" style="flex: 1; overflow-y: auto; padding: 15px; background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                <div class="cv-chatbot-message agent" style="background-color: #e9ecef; color: #333; padding: 10px 15px; border-radius: 18px; margin-bottom: 10px; max-width: 80%; align-self: flex-start; border-bottom-left-radius: 4px; font-size: 14px; line-height: 1.4;">
                     Bonjour ! Je suis l'assistant virtuel d'Antoine Goupil. N'hésitez pas à me poser des questions sur ses compétences, son expérience, sa formation ou ses projets.
                 </div>
             </div>
@@ -63,6 +63,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // URL de l'API déployée sur Render
     const API_URL = 'https://agent-conversationnel-cv-1.onrender.com/api/chat/stream';
     
+    // Fonction pour convertir le texte Markdown en HTML
+    function markdownToHtml(text) {
+        // Convertir les **texte** en <strong>texte</strong> pour le gras
+        text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        
+        // Convertir les *texte* en <em>texte</em> pour l'italique
+        text = text.replace(/\*(.*?)\*/g, '<em>$1</em>');
+        
+        // Convertir les `texte` en <code>texte</code> pour le code
+        text = text.replace(/`(.*?)`/g, '<code style="background-color: #f0f0f0; padding: 2px 4px; border-radius: 3px; font-family: monospace;">$1</code>');
+        
+        // Convertir les liens [texte](url) en <a href="url">texte</a>
+        text = text.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" style="color: inherit; text-decoration: underline;">$1</a>');
+        
+        // Convertir les sauts de ligne en <br>
+        text = text.replace(/\n/g, '<br>');
+        
+        return text;
+    }
+    
     // Fonction pour ajouter un message dans la conversation
     function addMessage(content, isUser = false) {
         const messageElement = document.createElement('div');
@@ -77,7 +97,9 @@ document.addEventListener('DOMContentLoaded', function() {
             borderRadius: '18px',
             marginBottom: '10px',
             maxWidth: '80%',
-            alignSelf: isUser ? 'flex-end' : 'flex-start'
+            alignSelf: isUser ? 'flex-end' : 'flex-start',
+            fontSize: '14px',  // Taille de police réduite
+            lineHeight: '1.4'   // Interligne amélioré
         });
         
         // Ajuster les coins pour indiquer la direction
@@ -88,7 +110,13 @@ document.addEventListener('DOMContentLoaded', function() {
             messageElement.style.borderBottomLeftRadius = '4px';
         }
         
-        messageElement.textContent = content;
+        // Convertir le contenu Markdown en HTML si ce n'est pas un message utilisateur
+        if (!isUser) {
+            messageElement.innerHTML = markdownToHtml(content);
+        } else {
+            messageElement.textContent = content;
+        }
+        
         chatMessages.appendChild(messageElement);
         
         // Faire défiler vers le bas
@@ -198,7 +226,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 marginBottom: '10px',
                 maxWidth: '80%',
                 alignSelf: 'flex-start',
-                borderBottomLeftRadius: '4px'
+                borderBottomLeftRadius: '4px',
+                fontSize: '14px',  // Taille de police réduite
+                lineHeight: '1.4'   // Interligne amélioré
             });
             
             chatMessages.appendChild(agentMessageElement);
@@ -225,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             
                             if (data.content) {
                                 agentResponse += data.content;
-                                agentMessageElement.textContent = agentResponse;
+                                agentMessageElement.innerHTML = markdownToHtml(agentResponse);
                                 chatMessages.scrollTop = chatMessages.scrollHeight;
                             }
                             
