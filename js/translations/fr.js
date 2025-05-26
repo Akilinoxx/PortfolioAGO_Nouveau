@@ -71,16 +71,16 @@ const translationsFR = {
     "copyright": " 2025 Antoine Goupil. Tous droits réservés.",
     
     // Project descriptions - Vous pouvez ajouter les descriptions spécifiques des projets ici
-    "project1_title": "Hackaton des 3M Seconde Place",
+    "project1_title": "Hackaton avec MistralAI, Make & Malt - Seconde Place",
     "project1_desc": "<strong>Eugenia School</strong> a organisé un <strong>hackathon</strong> en réunissant trois acteurs majeurs : <strong>Malt</strong>, <strong>Mistral AI</strong> et <strong>Make</strong>, avec un objectif commun : challenger les étudiants sur un <strong>business case réel</strong> de haut niveau. La problématique que rencontre malt ? <strong>L'hyperpersonnalisation</strong> de leurs <strong>campagnes marketing</strong>.",
     
-    "project2_title": "Hackathon Binko - Modèle de diffusion IA",
+    "project2_title": "Hackaton BINKO : Génération d’images au service du machine learning",
     "project2_desc": "Lors du <strong>Géniathon</strong> organisé par <strong>Eugenia School</strong> pour la startup <strong>BINKO</strong>, nous avions un défi passionnant à relever : <strong>aider à la création d'une IA qui permet de faire un tri automatique des déchets.</strong> Avec mon équipe nous avons décroché la <strong>2ᵉ place</strong> du concours 🥈",
     
-    "project3_title": "Automatisation des Webinars pour BAW",
+    "project3_title": "Replay Booster : automatiser la valorisation des webinars pour BAW",
     "project3_desc": "J'ai développé une <strong>application desktop</strong> en <strong>Python</strong> pour <strong>BAW Marketing</strong>, afin <strong>d'automatiser</strong> la conversion des replays de <strong>webinars</strong> en fichiers audio, puis en <strong>retranscriptions</strong>, facilitant ainsi la création de <strong>contenus dérivés</strong> (articles, résumés, publications) grâce à <strong>l'IA</strong>. Utilisation <strong>Python + MAKE</strong>",
     
-    "project4_title": "Scrapping de données d'entreprises Pappers",
+    "project4_title": "Scrapping de données d'entreprises via Pappers",
     "project4_desc": "Développement d'un <strong>scraper</strong> pour extraire des <strong>données d'entreprises</strong> depuis Pappers avec <strong>contournement des restrictions</strong> grâce à une <strong>boucle de proxys résidentiels</strong>, permettant une collecte efficace et à grande échelle.",
     
     "project5_title": "Scraping & RAG pour extraction d'informations web",

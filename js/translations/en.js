@@ -71,16 +71,16 @@ const translationsEN = {
     "copyright": "© 2025 Antoine Goupil. All rights reserved.",
     
     // Project descriptions
-    "project1_title": "Hackathon of the 3Ms Second Place",
+    "project1_title": "Hackathon with MistralAI, Make & Malt - Second Place",
     "project1_desc": "<strong>Eugenia School</strong> organized a <strong>hackathon</strong> bringing together three major players: <strong>Malt</strong>, <strong>Mistral AI</strong> and <strong>Make</strong>, with a common goal: to challenge students on a high-level <strong>real business case</strong>. The problem Malt faces? <strong>Hyperpersonalization</strong> of their <strong>marketing campaigns</strong>.",
     
-    "project2_title": "Binko Hackathon - AI Diffusion Model",
+    "project2_title": "BINKO Hackathon: Image Generation for Machine Learning",
     "project2_desc": "During the <strong>Geniathon</strong> organized by <strong>Eugenia School</strong> for the startup <strong>BINKO</strong>, we had an exciting challenge: <strong>helping create an AI that enables automatic waste sorting.</strong> With my team, we secured <strong>2nd place</strong> in the competition 🥈",
     
-    "project3_title": "Webinar Automation for BAW",
+    "project3_title": "Replay Booster: Automating Webinar Content Creation",
     "project3_desc": "I developed a <strong>desktop application</strong> in <strong>Python</strong> for <strong>BAW Marketing</strong>, to <strong>automate</strong> the conversion of <strong>webinar</strong> replays into audio files, then into <strong>transcriptions</strong>, facilitating the creation of <strong>derivative content</strong> (articles, summaries, publications) thanks to <strong>AI</strong>. Using <strong>Python + MAKE</strong>",
     
-    "project4_title": "Pappers Business Data Scraping",
+    "project4_title": "Business Data Scraping from Pappers Website",
     "project4_desc": "Development of a <strong>scraper</strong> to extract <strong>business data</strong> from Pappers with <strong>restriction bypass</strong> using a <strong>residential proxy rotation loop</strong>, enabling efficient and large-scale data collection.",
     
     "project5_title": "Scraping & RAG for Web Information Extraction",
