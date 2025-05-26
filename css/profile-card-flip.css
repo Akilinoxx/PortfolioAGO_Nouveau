@@ -51,6 +51,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 20%;
+    transform: scale(1.02); /* Légèrement agrandir l'image pour éviter les traits noirs aux bords */
 }
 
 /* Animation de pulsation lors du survol */
