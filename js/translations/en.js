@@ -57,15 +57,15 @@ const translationsEN = {
     "cert3_desc": "Specialization in data marketing and analysis.",
     "cert3_desc_long": "Specialization in data marketing and analysis. This degree validates my advanced training in data-oriented marketing, combining skills in data analysis, digital marketing, and data-based strategies.",
     
-    "cert4_title": "Datahaiku Core Designer",
+    "cert4_title": "Dataiku Core Designer",
     "cert4_date": "2025",
-    "cert4_desc": "Official certification validating my skills in designing data flows and analyses with Datahaiku DSS.",
-    "cert4_desc_long": "Official certification validating my skills in designing data flows and analyses with Datahaiku DSS. This certification attests to my ability to create and manage complete data analysis projects in the Datahaiku environment.",
+    "cert4_desc": "Official certification validating my skills in designing data flows and analyses with Dataiku DSS.",
+    "cert4_desc_long": "Official certification validating my skills in designing data flows and analyses with Dataiku DSS. This certification attests to my ability to create and manage complete data analysis projects in the Dataiku environment.",
     
-    "cert5_title": "Datahaiku Machine Learning",
+    "cert5_title": "Dataiku Machine Learning",
     "cert5_date": "2025",
-    "cert5_desc": "Certification attesting to my mastery of machine learning and AI techniques applied in the Datahaiku environment.",
-    "cert5_desc_long": "Certification attesting to my mastery of machine learning and AI techniques applied in the Datahaiku environment. This certification validates my advanced skills in developing predictive models and machine learning algorithms.",
+    "cert5_desc": "Certification attesting to my mastery of machine learning and AI techniques applied in the Dataiku environment.",
+    "cert5_desc_long": "Certification attesting to my mastery of machine learning and AI techniques applied in the Dataiku environment. This certification validates my advanced skills in developing predictive models and machine learning algorithms.",
     
     // Footer
     "copyright": "© 2025 Antoine Goupil. All rights reserved.",

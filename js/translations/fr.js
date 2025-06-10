@@ -57,15 +57,15 @@ const translationsFR = {
     "cert3_desc": "Spécialisation en data marketing et analyse.",
     "cert3_desc_long": "Spécialisation en data marketing et analyse. Ce diplôme valide ma formation avancée en marketing orienté données, combinant des compétences en analyse de données, marketing digital et stratégies basées sur la data.",
     
-    "cert4_title": "Datahaiku Core Designer",
+    "cert4_title": "Dataiku Core Designer",
     "cert4_date": "2025",
-    "cert4_desc": "Certification officielle validant mes compétences en conception de flux de données et d'analyses avec Datahaiku DSS.",
-    "cert4_desc_long": "Certification officielle validant mes compétences en conception de flux de données et d'analyses avec Datahaiku DSS. Cette certification atteste de ma capacité à créer et gérer des projets d'analyse de données complets dans l'environnement Datahaiku.",
+    "cert4_desc": "Certification officielle validant mes compétences en conception de flux de données et d'analyses avec Dataiku DSS.",
+    "cert4_desc_long": "Certification officielle validant mes compétences en conception de flux de données et d'analyses avec Dataiku DSS. Cette certification atteste de ma capacité à créer et gérer des projets d'analyse de données complets dans l'environnement Dataiku.",
     
-    "cert5_title": "Datahaiku Machine Learning",
+    "cert5_title": "Dataiku Machine Learning",
     "cert5_date": "2025",
-    "cert5_desc": "Certification attestant ma maîtrise des techniques de machine learning et d'IA appliquées dans l'environnement Datahaiku.",
-    "cert5_desc_long": "Certification attestant ma maîtrise des techniques de machine learning et d'IA appliquées dans l'environnement Datahaiku. Cette certification valide mes compétences avancées en développement de modèles prédictifs et d'algorithmes d'apprentissage automatique.",
+    "cert5_desc": "Certification attestant ma maîtrise des techniques de machine learning et d'IA appliquées dans l'environnement Dataiku.",
+    "cert5_desc_long": "Certification attestant ma maîtrise des techniques de machine learning et d'IA appliquées dans l'environnement Dataiku. Cette certification valide mes compétences avancées en développement de modèles prédictifs et d'algorithmes d'apprentissage automatique.",
     
     // Footer
     "copyright": " 2025 Antoine Goupil. Tous droits réservés.",
