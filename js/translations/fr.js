@@ -86,6 +86,6 @@ const translationsFR = {
     "project5_title": "Scraping & RAG pour extraction d'informations web",
     "project5_desc": "Développement d'une solution mêlant <strong>web scraping</strong> et <strong>RAG</strong> pour extraire automatiquement des <strong>données clés</strong> (menus, adresses, contacts) depuis des sites de <strong>restaurants</strong> ou de <strong>cabinets dentaires</strong>, en les structurant de manière claire et exploitable.",
     
-    "project6_title": "2e place au Hackathon Welcome to the Jungle – Officule Pulse",
-    "project6_desc": "Comment <strong>redonner envie d'aller au bureau</strong> sans l'imposer ? C'est le défi lancé par <strong>Welcome to the Jungle</strong> avec son hackathon <strong>Officule Pulse</strong>. Notre solution : un <strong>écosystème d'engagement hybride</strong> intégré à Slack, utilisant <strong>Dust</strong> (IA), <strong>Make</strong> (automatisation), <strong>Google Cloud Platform</strong> et d'autres technologies innovantes."
+    "project6_title": "2e place au Hackathon Welcome to the Jungle – Office Pulse",
+    "project6_desc": "Comment <strong>redonner envie d'aller au bureau</strong> sans l'imposer ? C'est le défi lancé par <strong>Welcome to the Jungle</strong> avec son hackathon <strong>Office Pulse</strong>. Notre solution : un <strong>écosystème d'engagement hybride</strong> intégré à Slack, utilisant <strong>Dust</strong> (IA), <strong>Make</strong> (automatisation), <strong>Google Cloud Platform</strong> et d'autres technologies innovantes."
 };
